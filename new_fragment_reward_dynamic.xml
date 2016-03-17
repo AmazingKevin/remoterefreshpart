@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/dynamic_listview_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/empty_view_drawable_padding"
+            android:gravity="center_horizontal"
+            android:text="@string/touch_to_reload"
+            android:textColor="@color/empty_bg_text_color"
+            android:textSize="@dimen/text_size16" />
+    </LinearLayout>
+
+    <com.blwy.zjh.ui.view.ControlScrollListView
+        android:id="@+id/pr_dynamic_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@color/public_divider_line_color"
+        android:dividerHeight="@dimen/public_divider_line_height" />
+
+</FrameLayout>
